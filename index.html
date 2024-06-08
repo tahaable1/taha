@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Taha's profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        section {
+            padding: 20px;
+        }
+        .cover-photo {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: 500px; 
+            object-fit: cover; 
+            border-radius: 10px; 
+            margin-bottom: 20px;
+            transition: transform 0.5s ease;
+        }
+        .details, .hobbies, .education {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            text-align: left;
+        }
+        .details h3, .hobbies h3, .education h3 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .details p, .hobbies p, .education p, .education ul li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .details strong, .hobbies strong, .education strong {
+            color: #333;
+        }
+        .album {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .place {
+            display: none;
+        }
+        .place.active {
+            display: block;
+        }
+        .album-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .album-nav button {
+            background-color: #a72828;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .album-nav button:hover {
+            background-color: #218838;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        .animate {
+            transform: scale(1.2);
+        }
+        .external-links {
+            margin-top: 50px;
+            vertical-align: middle;
+            margin-top: 17px;
+            margin-right: 10px;
+        }
+        .external-links img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-top: 17px;
+            margin-right: 10px;
+        }
+        .external-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            margin-top: 17px;
+            margin-right: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Taha's profile</h1>
+    </header>
+    <section id="about">
+        <img class="cover-photo" src="Cover University page.JPG" alt="University Cover Page">
+        <img src="Taha.jpg" alt="Taha's Picture">
+        <div class="details">
+            <h3>Personal Details</h3>
+            <p><strong>University Name:</strong> ALFA University College (AUC)</p>
+            <p><strong>Lecture Name:</strong> Mr. Zainuddin Bin Johori</p>
+            <p><strong>Subject Name/Code:</strong> Integrative Programming & Technologies (BIT4214)</p>
+            <p><strong>Assignment:</strong> 2</p>
+            <p><strong>Student Name:</strong> Muhammad Taha Siddiqui</p>
+            <p><strong>Student ID:</strong> ALFA2022-0887</p>
+            <p><strong>Student Email:</strong> tahaable26@gmail.com</p>
+            <p><strong>Student Mobile No:</strong> +601116116400</p>
+            <p><strong>Student Address:</strong> J-16-12, BSP21, PERSIARAN SAUJANA PUTRA UTAMA, BANDAR SAUJANA PUTRA, 42610 JENJAROM, KUALA LANGAT, SELANGOR.</p>
+        </div>
+        <div class="hobbies">
+            <h3>Hobbies</h3>
+            <p>1. <strong>Gardening:</strong> I enjoy cultivating a variety of plants and flowers. Gardening provides a sense of accomplishment and tranquility, connecting me with nature.</p>
+            <p>2. <strong>Cooking:</strong> Experimenting with new recipes and cooking techniques is a passion of mine. Preparing delicious meals for family and friends brings me great satisfaction.</p>
+            <p>3. <strong>Photography:</strong> Capturing moments through the lens of a camera allows me to express my creativity. I love exploring different settings and finding beauty in everyday life.</p>
+            <p>4. <strong>Traveling:</strong> Exploring new destinations and experiencing different cultures enriches my life. Travel broadens my horizons and provides unforgettable memories.</p>
+        </div>
+        <div class="education">
+            <h3>Education Details</h3>
+            <p><strong>Semester:</strong> 4</p>
+            <ul>
+                <li>Integrative Programming &amp; Technologies (BIT4214) By Mr. Zainuddin</li>
+                <li>Visual Basic.NET Programming (BIT4204) By Mr. Samson Idemudia</li>
+                <li>Fundamental of Networking (BIT4193) By Mr. Samson Idemudia</li>
+                <li>Information Assurance & Security (BIT4153/BEB4303) By Mr. RAI WAQAS</li>
+                <li>Community Service (MPU3452) By MS. SITI RASYIQAH AKMAR</li>
+            </ul>
+        </div>
+    </section>
+    <section id="places">
+        <h2>Places I have Visited in Malaysia</h2>
+        <div class="album">
+            <div class="album-nav">
+                <button id="prevBtn"><</button>
+                <button id="nextBtn">></button>
+            </div>
+            <div class="place active">
+                <img src="KLCC Park.jpg" alt="KLCC Park">
+                <p><strong>KLCC Park</strong></p>
+                <p>The KLCC is a complex of iconic buildings built on the grounds of the former Selangor Turf Club.</p>
+            </div>
+            <div class="place">
+                <img src="Royal Selangor Visitor Centre.jpg" alt="Royal Selangor Visitor Centre">
+                <p><strong>Royal Selangor Visitor Centre</strong></p>
+                <p>Royal Selangor Visitor Centre is the go-to place in Kuala Lumpur, Malaysia to experience pewter, both as a beautiful piece to be admired and as a craft. Wander through intriguing museum exhibits.</p>
+            </div>
+            <div class="place">
+                <img src="Petronas Twin Towers.jpg" alt="Petronas Twin Towers">
+                <p><strong>Petronas Twin Towers</strong></p>
+                <p>No trip to KL would be complete without a visit to the world's tallest twin towers. The skyscrapers are utterly stunning, particularly when illuminated at night.</p>
+            </div>
+            <div class="place">
+                <img src="Panorama Langkawi SkyCab.jpg" alt="Panorama Langkawi SkyCab">
+                <p><strong>Panorama Langkawi SkyCab</strong></p>
+                <p>Panorama Langkawi is located on the southwest coast of Langkawi island. The cable car ride will bring you all the way up to about 708 meters above sea level. This journey covers a total distance.</p>
+            </div>
+            <div class="place">
+                <img src="Legoland Malaysia.jpg" alt="Legoland Malaysia">
+                <p><strong>Legoland Malaysia</strong></p>
+                <p>It has the Lego blocks built replica of cities and structures such as KLCC area, Taj Mahal, China, Vietnam, KLIA.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Thank you for visiting my page!</p>
+        <div class="external-links">
+            <a class="button" href="https://alfa.edu.my/" target="_blank"><img src="university-solid.svg" alt="University"> ALFA University</a>
+            <a class="button" href="https://wa.me/+60166946162" target="_blank"><img src="whatsapp.svg" alt="WhatsApp">Mr. Zainuddin Bin Johori</a>
+            <a class="button" href="https://wa.me/+60182510322" target="_blank"><img src="whatsapp.svg" alt="WhatsApp">Ebrahim</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("img");
+            const places = document.querySelectorAll(".place");
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+            let currentIndex = 0;
+
+            images.forEach(img => {
+                img.addEventListener("mouseover", function() {
+                    this.classList.add("animate");
+                });
+                img.addEventListener("mouseout", function() {
+                    this.classList.remove("animate");
+                });
+            });
+
+            function showPlace(index) {
+                places.forEach((place, i) => {
+                    place.classList.toggle("active", i === index);
+                });
+            }
+
+            prevBtn.addEventListener("click", function() {
+                currentIndex = (currentIndex - 1 + places.length) % places.length;
+                showPlace(currentIndex);
+            });
+
+            nextBtn.addEventListener("click", function() {
+                currentIndex = (currentIndex + 1) % places.length;
+                showPlace(currentIndex);
+            });
+
+            showPlace(currentIndex);
+        });
+    </script>
+</body>
+</html>
